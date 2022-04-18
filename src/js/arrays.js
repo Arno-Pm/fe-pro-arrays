@@ -83,11 +83,11 @@ function some(array, callback) {
 */
 function every(array, callback) {
   for (let i = 0; i < array.length; i++) {
-    if (callback(array[i], i, array)) {
-    return false;
+    if (!callback(array[i], i, array)) {
+      return false;
+    }
   }
-}
-return true;
+  return true;
 }
 
 // Эту часть не удаляем, она важна для проверки результата
