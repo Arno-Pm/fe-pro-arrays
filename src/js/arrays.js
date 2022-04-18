@@ -64,14 +64,17 @@ function reduce(array, callback, initialValue) {
  Фишка задания сделать свою реализацию, чтобы понять, как он работает под капотом. Для перебора советую использовать for цикл
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
+
 function some(array, callback) {
   for (let i = 0; i < array.length; i++) {
-    if (callback(array[i], i, array)) {
+    if(callback(array[i], i, array)) {
       return true;
-    }
-  }
-  return false;
+    } 
+    else { 
+      return false;
+        }
 }
+
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
  вот документация https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
