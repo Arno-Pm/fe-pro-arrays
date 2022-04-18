@@ -53,7 +53,6 @@ function filter(array, callback) {
 function reduce(array, callback, initialValue) {
   let answer = 0;
   for (let i = 0; i < array.length; i++) {
-
     answer += callback(initialValue, array[i], i, array);
   }
   return answer;
