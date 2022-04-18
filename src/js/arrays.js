@@ -66,12 +66,11 @@ function reduce(array, callback, initialValue) {
 */
 function some(array, callback) {
   for (let i = 0; i < array.length; i++) {
-    if(callback(array[i], i, array)) {
+    if (callback(array[i], i, array)) {
       return true;
-    } 
-    else { 
-      return false;
-        }
+    }
+  }
+  return false;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
